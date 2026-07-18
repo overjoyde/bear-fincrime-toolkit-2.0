@@ -10,10 +10,17 @@ for scope.
 import networkx as nx
 import pandas as pd
 
+try:
+    from ..scoring import normalized_alert_score
+except ImportError:  # Support running pipelines/run_pipeline.py as a script.
+    from scoring import normalized_alert_score
+
 MIN_COMMUNITY_SIZE = 4
 MAX_COMMUNITY_SIZE = 25
 MIN_INTERNAL_DENSITY = 0.35
 MIN_INTERNAL_VOLUME_SHARE = 0.6
+
+RESULT_COLUMNS = ["entity_id", "detector", "reason", "score", "raw_score"]
 
 
 def _build_graph(transactions: pd.DataFrame) -> nx.Graph:
@@ -32,7 +39,7 @@ def detect(transactions: pd.DataFrame) -> pd.DataFrame:
     df = transactions[transactions["sender_id"] != "CASH"]
     graph = _build_graph(df)
     if graph.number_of_nodes() < MIN_COMMUNITY_SIZE:
-        return pd.DataFrame()
+        return pd.DataFrame(columns=RESULT_COLUMNS)
 
     communities = nx.algorithms.community.louvain_communities(graph, weight="weight", seed=42)
 
@@ -57,6 +64,12 @@ def detect(transactions: pd.DataFrame) -> pd.DataFrame:
         internal_share = internal_volume / total_volume if total_volume > 0 else 0
 
         if density >= MIN_INTERNAL_DENSITY and internal_share >= MIN_INTERNAL_VOLUME_SHARE:
+            density_excess = (
+                density - MIN_INTERNAL_DENSITY
+            ) / (1 - MIN_INTERNAL_DENSITY)
+            volume_share_excess = (
+                internal_share - MIN_INTERNAL_VOLUME_SHARE
+            ) / (1 - MIN_INTERNAL_VOLUME_SHARE)
             for entity_id in community:
                 flags.append({
                     "entity_id": entity_id,
@@ -66,6 +79,11 @@ def detect(transactions: pd.DataFrame) -> pd.DataFrame:
                         f"connection density and {internal_share:.0%} of volume staying "
                         f"inside the cluster"
                     ),
-                    "score": round(density * internal_share, 2),
+                    "score": normalized_alert_score(
+                        density_excess, volume_share_excess
+                    ),
+                    "raw_score": round(density * internal_share, 2),
                 })
-    return pd.DataFrame(flags).drop_duplicates(subset=["entity_id", "detector"])
+    return pd.DataFrame(flags, columns=RESULT_COLUMNS).drop_duplicates(
+        subset=["entity_id", "detector"]
+    )

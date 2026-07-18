@@ -30,7 +30,7 @@ Output (written to `--out`):
 
 | Typology | What it looks like |
 |---|---|
-| `structuring` | Several cash deposits just under a reporting threshold, clustered in a short window, summing well above it |
+| `structuring` | Several cash deposits near an illustrative internal scenario threshold, clustered in a short window |
 | `fan_in_out` | A mule account receiving from many unrelated senders in a short window, then forwarding most of it to one or two receivers |
 | `pass_through` | An account receiving a large sum and forwarding nearly all of it within hours to a day, repeatedly |
 | `community_ring` | A small cluster of accounts transacting mostly among themselves - individually unremarkable transactions, suspicious only as a network |

@@ -28,13 +28,14 @@ Alert details:
 **Input:**
 ```
 Customer type: retail, 14 months tenure
-Alert trigger: velocity - 9,500 SEK deposited across 6 cash transactions
-over 3 days, each under the 10,000 SEK reporting threshold
+Alert trigger: six cash deposits between 8,600 and 9,800 SEK within three
+days. The institution's illustrative internal scenario threshold is
+10,000 SEK. This is not a statutory threshold for reporting.
 Account history: typical monthly inflow ~4,000 SEK from stated salary
 ```
 
 **Expected kind of output:**
-- Likely trigger: repeated sub-threshold cash deposits within a short window,
+- Likely trigger: repeated near-threshold cash deposits within a short window,
   well above the account's historical baseline.
 - Typology match: structuring / smurfing (deliberate sub-threshold
   structuring), though a legitimate explanation (e.g. a one-off cash

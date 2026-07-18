@@ -32,6 +32,9 @@ Walk me through:
 
 **Input:**
 ```
+All amounts and thresholds below are fictitious illustrative internal
+scenario settings. They are not statutory thresholds for reporting.
+
 Current rule: flag any single cash deposit over 9,000 SEK for retail
 accounts.
 Proposed change: raise threshold to 9,800 SEK to reduce false positives

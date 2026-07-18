@@ -7,9 +7,16 @@ TM rule - see pipelines/README.md for scope.
 """
 import pandas as pd
 
+try:
+    from ..scoring import normalized_alert_score
+except ImportError:  # Support running pipelines/run_pipeline.py as a script.
+    from scoring import normalized_alert_score
+
 WINDOW_HOURS = 72
 MIN_DISTINCT_SENDERS = 6
 MIN_PASS_THROUGH_RATIO = 0.7
+
+RESULT_COLUMNS = ["entity_id", "detector", "reason", "score", "raw_score"]
 
 
 def detect(transactions: pd.DataFrame) -> pd.DataFrame:
@@ -40,15 +47,25 @@ def detect(transactions: pd.DataFrame) -> pd.DataFrame:
             ]
             total_out = out_window["amount"].sum()
             if total_in > 0 and (total_out / total_in) >= MIN_PASS_THROUGH_RATIO:
+                pass_through_ratio = total_out / total_in
+                sender_excess = (
+                    distinct_senders - MIN_DISTINCT_SENDERS
+                ) / MIN_DISTINCT_SENDERS
+                ratio_excess = (
+                    pass_through_ratio - MIN_PASS_THROUGH_RATIO
+                ) / (1 - MIN_PASS_THROUGH_RATIO)
                 flags.append({
                     "entity_id": entity_id,
                     "detector": "fan_in_out",
                     "reason": (
                         f"received from {distinct_senders} distinct senders within "
                         f"{WINDOW_HOURS}h ({total_in:.0f} SEK), then forwarded "
-                        f"{total_out / total_in:.0%} of it onward"
+                        f"{pass_through_ratio:.0%} of it onward"
                     ),
-                    "score": round(total_out / total_in, 2),
+                    "score": normalized_alert_score(sender_excess, ratio_excess),
+                    "raw_score": round(pass_through_ratio, 2),
                 })
                 break
-    return pd.DataFrame(flags).drop_duplicates(subset=["entity_id", "detector"])
+    return pd.DataFrame(flags, columns=RESULT_COLUMNS).drop_duplicates(
+        subset=["entity_id", "detector"]
+    )

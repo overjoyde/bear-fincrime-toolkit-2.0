@@ -1,0 +1,14 @@
+{
+  "structuring": {
+    "minimum_precision": 0.80,
+    "minimum_recall": 0.80
+  },
+  "fan_in_out": {
+    "minimum_precision": 0.80,
+    "minimum_recall": 0.80
+  },
+  "pass_through": {
+    "minimum_precision": 0.75,
+    "minimum_recall": 0.75
+  }
+}

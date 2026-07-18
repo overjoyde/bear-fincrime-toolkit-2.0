@@ -11,7 +11,10 @@ from pathlib import Path
 
 import pandas as pd
 
-from detectors import structuring, fan_in_out, pass_through, communities
+try:
+    from .detectors import communities, fan_in_out, pass_through, structuring
+except ImportError:  # Support direct execution from the pipelines directory.
+    from detectors import communities, fan_in_out, pass_through, structuring
 
 DETECTORS = {
     "structuring": structuring.detect,
@@ -37,8 +40,12 @@ def run(input_path: Path, only=None) -> pd.DataFrame:
             results.append(flagged)
 
     if not results:
-        return pd.DataFrame(columns=["entity_id", "detector", "reason", "score"])
-    return pd.concat(results, ignore_index=True).sort_values(["detector", "score"], ascending=[True, False])
+        return pd.DataFrame(
+            columns=["entity_id", "detector", "reason", "score", "raw_score"]
+        )
+    return pd.concat(results, ignore_index=True).sort_values(
+        "score", ascending=False
+    ).reset_index(drop=True)
 
 
 def summarize(flags: pd.DataFrame) -> str:
