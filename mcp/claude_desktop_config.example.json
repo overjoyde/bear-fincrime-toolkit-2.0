@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "fincrime-toolkit-data": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/absolute/path/to/fincrime-llm-toolkit/data/generated"
+      ]
+    },
+    "fincrime-toolkit-db": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "mcp-server-sqlite-npx",
+        "/absolute/path/to/fincrime-llm-toolkit/data/generated/synthetic.db"
+      ]
+    }
+  }
+}

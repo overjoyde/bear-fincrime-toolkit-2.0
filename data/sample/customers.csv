@@ -1,0 +1,121 @@
+customer_id,name,customer_type,expected_monthly_volume,onboarding_days_ago
+C00001,Sofia Olsson,retail,30339.25,178
+C00002,Karl Larsson,retail,27477.1,1893
+C00003,Erik Johansson,retail,21213.12,173
+C00004,Emil Olsson,retail,5482.64,1188
+C00005,Fjord Strom AB,business,181588.83,842
+C00006,Fjord Nordic Group AB,business,260371.17,623
+C00007,Emil Johansson,retail,26978.37,1177
+C00008,Filip Johansson,retail,27427.21,1338
+C00009,Karl Svensson,retail,32908.65,1185
+C00010,Fjord Vind Import AB,business,168881.67,1621
+C00011,Wilma Bengtsson,retail,22033.74,643
+C00012,Filip Jonsson,retail,35752.84,197
+C00013,Alma Persson,retail,39755.77,1523
+C00014,Anton Johansson,retail,7958.76,886
+C00015,Freja Karlsson,retail,42197.35,893
+C00016,Baltic Sol Group AB,business,240946.37,1705
+C00017,Axel Gustafsson,retail,23860.34,1662
+C00018,Lina Eriksson,retail,22912.13,1390
+C00019,Skog Strom Import AB,business,250138.94,612
+C00020,Axel Andersson,retail,42507.24,757
+C00021,Karl Persson,retail,5476.09,1603
+C00022,Oskar Olsson,retail,19419.89,1814
+C00023,Filip Persson,retail,19869.06,599
+C00024,Leo Hansson,retail,26109.22,1476
+C00025,Axel Pettersson,retail,40136.1,1991
+C00026,Lina Karlsson,retail,9354.53,1378
+C00027,Hugo Hansson,retail,27743.19,568
+C00028,Sofia Olsson,retail,25452.82,1278
+C00029,Sofia Jonsson,retail,39086.48,1976
+C00030,Erik Persson,retail,40780.39,1627
+C00031,Emil Olsson,retail,19718.92,837
+C00032,Sten Nordic Handel AB,business,38857.33,457
+C00033,Karl Larsson,retail,28230.54,239
+C00034,Polar Sol AB,business,285705.65,1286
+C00035,Fjord Strom Trading AB,business,61594.14,546
+C00036,Anton Larsson,retail,22914.36,266
+C00037,Nora Persson,retail,23321.06,205
+C00038,Bro Skog Trading AB,business,252079.51,360
+C00039,Maja Svensson,retail,18193.6,1443
+C00040,Anna Jansson,retail,25180.6,1346
+C00041,Elin Svensson,retail,18401.39,372
+C00042,Oskar Svensson,retail,25745.82,1059
+C00043,Oskar Gustafsson,retail,37083.47,1583
+C00044,Oskar Hansson,retail,19828.74,1675
+C00045,Alma Persson,retail,17933.63,89
+C00046,Elin Persson,retail,13885.32,1448
+C00047,Axel Persson,retail,36959.76,1510
+C00048,Axel Johansson,retail,12259.42,494
+C00049,Freja Nilsson,retail,23271.44,1873
+C00050,Anna Persson,retail,41186.37,734
+C00051,Lina Hansson,retail,30744.6,1893
+C00052,Maja Persson,retail,40338.46,918
+C00053,Freja Johansson,retail,36634.59,1508
+C00054,Ida Jonsson,retail,42765.47,1514
+C00055,Sofia Andersson,retail,9348.33,1883
+C00056,Sofia Gustafsson,retail,37713.44,1001
+C00057,Axel Karlsson,retail,26043.72,298
+C00058,Baltic Sol Import AB,business,281414.95,918
+C00059,Maja Hansson,retail,39704.09,87
+C00060,Viktor Svensson,retail,13102.65,1231
+C00061,Emil Olsson,retail,38036.19,154
+C00062,Axel Bengtsson,retail,22242.76,1224
+C00063,Alma Olsson,retail,37739.87,1828
+C00064,Emil Karlsson,retail,24987.28,68
+C00065,Filip Gustafsson,retail,3165.16,1666
+C00066,Polar Vind Group AB,business,223054.12,1169
+C00067,Sol Sol Group AB,business,155096.36,1620
+C00068,Sol Nordic Handel AB,business,73565.72,116
+C00069,Alma Persson,retail,26592.63,1586
+C00070,Lina Persson,retail,16675.77,1065
+C00071,Maja Jonsson,retail,14641.79,1070
+C00072,Hugo Svensson,retail,42543.05,1461
+C00073,Elin Bengtsson,retail,26499.58,1961
+C00074,Nora Karlsson,retail,20498.76,833
+C00075,Lina Pettersson,retail,13106.83,179
+C00076,Viktor Jansson,retail,8138.7,1621
+C00077,Axel Karlsson,retail,13630.53,311
+C00078,Oskar Jonsson,retail,43005.17,845
+C00079,Filip Pettersson,retail,37962.68,360
+C00080,Alma Olsson,retail,17242.88,430
+C00081,Lina Jonsson,retail,18370.01,722
+C00082,Nora Jonsson,retail,3759.44,708
+C00083,Viktor Svensson,retail,43352.54,261
+C00084,Oskar Bengtsson,retail,7400.74,573
+C00085,Filip Eriksson,retail,34742.62,1708
+C00086,Elin Olsson,retail,9273.45,1912
+C00087,Hugo Jonsson,retail,16736.04,601
+C00088,Polar Sten AB,business,95298.56,64
+C00089,Elin Johansson,retail,28543.45,485
+C00090,Baltic Vind AB,business,114962.5,1162
+C00091,Elin Gustafsson,retail,8427.44,1109
+C00092,Karl Karlsson,retail,13999.6,400
+C00093,Viktor Pettersson,retail,15810.23,1585
+C00094,Nora Svensson,retail,31230.6,584
+C00095,Anna Eriksson,retail,4551.87,67
+C00096,Emil Nilsson,retail,24597.87,533
+C00097,Karl Pettersson,retail,37394.65,915
+C00098,Emil Hansson,retail,40326.49,1067
+C00099,Maja Nilsson,retail,17393.59,1734
+C00100,Sofia Olsson,retail,44556.4,141
+C00101,Anna Johansson,retail,29268.83,1831
+C00102,Filip Andersson,retail,6548.36,1752
+C00103,Alma Pettersson,retail,43779.06,1256
+C00104,Viktor Andersson,retail,22297.02,352
+C00105,Anna Eriksson,retail,18293.94,703
+C00106,Emil Larsson,retail,13266.75,1837
+C00107,Axel Karlsson,retail,3044.89,811
+C00108,Skog Sol Import AB,business,76274.42,1063
+C00109,Lina Eriksson,retail,37315.86,324
+C00110,Erik Olsson,retail,3944.75,653
+C00111,Lina Gustafsson,retail,43220.76,1777
+C00112,Anton Olsson,retail,35101.08,1505
+C00113,Sofia Eriksson,retail,33414.54,1347
+C00114,Sol Sten Import AB,business,216294.92,1065
+C00115,Sol Sol Group AB,business,253782.53,1677
+C00116,Strom Fjord AB,business,28724.95,302
+C00117,Karl Olsson,retail,38104.49,1173
+C00118,Nordic Sol Import AB,business,88476.71,570
+C00119,Baltic Sol Group AB,business,45743.74,1107
+C00120,Vind Skog AB,business,256917.42,510
