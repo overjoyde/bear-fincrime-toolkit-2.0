@@ -1,8 +1,38 @@
-# fincrime-llm-toolkit
+<p align="center">
+  <img src="./assets/readme/hero.svg" width="100%" alt="fincrime-llm-toolkit: Claude-first project instructions, Claude Code skills, and detection pipelines for AML/CTF transaction monitoring and KYC/EDD, run against synthetic data.">
+</p>
 
-A practitioner toolkit for using LLMs in Transaction Monitoring (TM), KYC/EDD,
-and financial-crime compliance work — built by someone who does this job, for
-people who do this job.
+<p align="center">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
+  <a href="https://github.com/overjoyde/fincrime-llm-toolkit/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/overjoyde/fincrime-llm-toolkit/actions/workflows/ci.yml/badge.svg"></a>
+  <a href=".github/workflows/ci.yml"><img alt="Python 3.11 | 3.12 | 3.13" src="https://img.shields.io/badge/python-3.11%20%7C%203.12%20%7C%203.13-3776AB.svg"></a>
+</p>
+
+A practitioner toolkit for using LLMs in Transaction Monitoring (TM),
+KYC/EDD, and financial-crime compliance work — built by someone who does
+this job, for people who do this job.
+
+## Proof, not prompts
+
+<p align="center">
+  <img src="./assets/readme/workflow.svg" width="100%" alt="Synthetic data with injected typologies feeds four explainable detectors; a role-aware evaluator checks precision and recall against fixed floors; CI blocks any push or pull request that regresses below them.">
+</p>
+
+Every detector in `pipelines/detectors/` runs against synthetic
+transactions with known ground truth, and
+[`evaluation/evaluate.py`](evaluation/README.md) checks precision and
+recall per typology — not overall accuracy, and not against roles a
+detector was never meant to catch. [`.github/workflows/ci.yml`](.github/workflows/ci.yml)
+runs this on every push and pull request; structuring, fan-in/out, and
+pass-through are **blocking** — a regression below their floor fails CI.
+Community-ring detection is measured but not yet blocking while its
+known stability limitations are addressed (see `evaluation/README.md`).
+
+Detector output is a `score` from 60–100: an alert-prioritization measure
+showing how strongly an observation exceeded the detector's triggering
+conditions, not a probability of money laundering. See
+`pipelines/README.md` for the full score contract and each detector's
+logic.
 
 ## What this is
 
@@ -74,6 +104,7 @@ fincrime-llm-toolkit/
 ├── prompts/      Single-task prompt templates with example input/output
 ├── grounding/    EU + Swedish source registers, plus curated resources.md
 ├── pipelines/    Python detection logic run against synthetic data
+├── evaluation/   Role-aware precision/recall scoring against ground truth
 ├── data/         Synthetic transaction generator + sample dataset
 └── mcp/          MCP config examples (filesystem, SQLite) as a grounding layer
 ```
