@@ -29,6 +29,12 @@ export default function PrecisionRecallChart({ curve, floor }) {
           strokeDasharray="4 4"
         />
       )}
+      {curve.map((point) => (
+        <circle key={'precision-' + point.threshold} cx={scaleX(point.threshold)} cy={scaleY(point.precision)} r="3" fill="#2563eb" />
+      ))}
+      {curve.map((point) => (
+        <circle key={'recall-' + point.threshold} cx={scaleX(point.threshold)} cy={scaleY(point.recall)} r="3" fill="#16a34a" />
+      ))}
     </svg>
   )
 }
