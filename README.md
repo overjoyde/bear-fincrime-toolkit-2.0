@@ -106,6 +106,7 @@ fincrime-llm-toolkit/
 ├── pipelines/    Python detection logic run against synthetic data
 ├── evaluation/   Role-aware precision/recall scoring against ground truth
 ├── data/         Synthetic transaction generator + sample dataset
+├── dashboard/    Model tuning dashboard (React + Vite, client-side)
 └── mcp/          MCP config examples (filesystem, SQLite) as a grounding layer
 ```
 
