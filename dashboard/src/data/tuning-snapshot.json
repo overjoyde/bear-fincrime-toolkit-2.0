@@ -1,0 +1,190 @@
+{
+  "structuring": {
+    "flagged": [
+      {
+        "entity_id": "C00051",
+        "score": 80.0
+      },
+      {
+        "entity_id": "C00031",
+        "score": 80.0
+      },
+      {
+        "entity_id": "C00007",
+        "score": 80.0
+      },
+      {
+        "entity_id": "C00093",
+        "score": 80.0
+      },
+      {
+        "entity_id": "C00069",
+        "score": 80.0
+      },
+      {
+        "entity_id": "C00037",
+        "score": 80.0
+      }
+    ],
+    "ground_truth_positive_ids": [
+      "C00007",
+      "C00031",
+      "C00037",
+      "C00051",
+      "C00069",
+      "C00093"
+    ],
+    "ground_truth_positive_count": 6,
+    "floor": {
+      "minimum_precision": 0.8,
+      "minimum_recall": 0.8
+    }
+  },
+  "fan_in_out": {
+    "flagged": [
+      {
+        "entity_id": "C00028",
+        "score": 100.0
+      },
+      {
+        "entity_id": "C00019",
+        "score": 100.0
+      },
+      {
+        "entity_id": "C00091",
+        "score": 98.5
+      },
+      {
+        "entity_id": "C00001",
+        "score": 92.3
+      }
+    ],
+    "ground_truth_positive_ids": [
+      "C00001",
+      "C00019",
+      "C00028",
+      "C00091"
+    ],
+    "ground_truth_positive_count": 4,
+    "floor": {
+      "minimum_precision": 0.8,
+      "minimum_recall": 0.8
+    }
+  },
+  "pass_through": {
+    "flagged": [
+      {
+        "entity_id": "C00063",
+        "score": 93.5
+      },
+      {
+        "entity_id": "C00116",
+        "score": 91.5
+      },
+      {
+        "entity_id": "C00021",
+        "score": 91.4
+      },
+      {
+        "entity_id": "C00048",
+        "score": 91.1
+      },
+      {
+        "entity_id": "C00104",
+        "score": 85.8
+      }
+    ],
+    "ground_truth_positive_ids": [
+      "C00021",
+      "C00048",
+      "C00063",
+      "C00116"
+    ],
+    "ground_truth_positive_count": 4,
+    "floor": {
+      "minimum_precision": 0.75,
+      "minimum_recall": 0.75
+    }
+  },
+  "community_ring": {
+    "flagged": [
+      {
+        "entity_id": "C00065",
+        "score": 63.4
+      },
+      {
+        "entity_id": "C00050",
+        "score": 63.4
+      },
+      {
+        "entity_id": "C00091",
+        "score": 63.4
+      },
+      {
+        "entity_id": "C00109",
+        "score": 63.4
+      },
+      {
+        "entity_id": "C00069",
+        "score": 63.4
+      },
+      {
+        "entity_id": "C00070",
+        "score": 63.4
+      },
+      {
+        "entity_id": "C00117",
+        "score": 63.4
+      },
+      {
+        "entity_id": "C00057",
+        "score": 63.4
+      },
+      {
+        "entity_id": "C00002",
+        "score": 63.4
+      },
+      {
+        "entity_id": "C00051",
+        "score": 63.4
+      },
+      {
+        "entity_id": "C00104",
+        "score": 63.4
+      },
+      {
+        "entity_id": "C00017",
+        "score": 63.4
+      },
+      {
+        "entity_id": "C00096",
+        "score": 63.4
+      }
+    ],
+    "ground_truth_positive_ids": [
+      "C00002",
+      "C00012",
+      "C00022",
+      "C00025",
+      "C00026",
+      "C00044",
+      "C00046",
+      "C00048",
+      "C00049",
+      "C00054",
+      "C00057",
+      "C00060",
+      "C00063",
+      "C00069",
+      "C00070",
+      "C00072",
+      "C00077",
+      "C00096",
+      "C00098",
+      "C00104",
+      "C00109"
+    ],
+    "ground_truth_positive_count": 21,
+    "floor": null
+  }
+}
