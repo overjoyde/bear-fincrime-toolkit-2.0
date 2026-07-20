@@ -2,7 +2,19 @@ name: CI
 
 on:
   push:
+    paths:
+      - 'pipelines/**'
+      - 'evaluation/**'
+      - 'data/**'
+      - 'tests/**'
+      - 'requirements-dev.txt'
   pull_request:
+    paths:
+      - 'pipelines/**'
+      - 'evaluation/**'
+      - 'data/**'
+      - 'tests/**'
+      - 'requirements-dev.txt'
 
 permissions:
   contents: read
