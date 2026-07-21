@@ -23,9 +23,9 @@ link between the original senders and the ultimate destination.
 Implemented in `pipelines/detectors/fan_in_out.py`. For each entity, the
 detector looks at incoming transactions within `WINDOW_HOURS` (72) of a
 given first inbound transaction, and flags the entity once distinct senders
-in that window reach `MIN_DISTINCT_SENDERS` (6) and outgoing transfers in
-the following window forward at least `MIN_PASS_THROUGH_RATIO` (0.7 = 70%)
-of the total received. The alert-prioritization score (60–100, see
+in that window reach `MIN_DISTINCT_SENDERS` (6) and outgoing transfers from
+that same starting point out to 144 hours later (2× WINDOW_HOURS) forward at
+least `MIN_PASS_THROUGH_RATIO` (0.7 = 70%) of the total received. The alert-prioritization score (60–100, see
 `pipelines/README.md`) is derived from how far the sender count and
 forward ratio exceed those minimums. The regression floor in
 `evaluation/thresholds.json` is 0.80 minimum precision / 0.80 minimum
