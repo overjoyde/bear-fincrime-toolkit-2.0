@@ -107,6 +107,7 @@ fincrime-llm-toolkit/
 ├── evaluation/   Role-aware precision/recall scoring against ground truth
 ├── data/         Synthetic transaction generator + sample dataset
 ├── dashboard/    Model tuning dashboard (React + Vite, client-side)
+├── scenarios/    Typology write-ups grounded in the real detectors + AMLTRIX
 └── mcp/          MCP config examples (filesystem, SQLite) as a grounding layer
 ```
 

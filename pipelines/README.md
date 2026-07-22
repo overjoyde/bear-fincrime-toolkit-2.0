@@ -14,6 +14,9 @@ that these thresholds are tuned for any real institution.
 | `detectors/pass_through.py` | Rapid movement / conduit | Flags entities that repeatedly receive a large sum and forward nearly all of it within hours |
 | `detectors/communities.py` | Network rings | Louvain community detection on the transaction graph; flags tightly-connected clusters where volume mostly stays inside the cluster |
 
+See `scenarios/<name>.md` (e.g. `scenarios/structuring.md`) for the full
+typology write-up behind each detector.
+
 Every detector takes a pandas DataFrame of transactions and returns a
 DataFrame with at least `entity_id`, `detector`, `reason`, `score`, and
 `raw_score`. Detectors may add window, transaction-ID, and feature evidence.
