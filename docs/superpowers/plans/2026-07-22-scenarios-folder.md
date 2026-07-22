@@ -140,7 +140,7 @@ any one of them suggests.
 ## Red flags / indicators
 - Multiple cash deposits to the same entity, each between 80% and 100% of
   an illustrative internal scenario threshold (10,000 SEK in this repo's
-  synthetic data — not a statutory reporting threshold).
+  synthetic data — not a statutory threshold for reporting).
 - At least 3 such deposits landing within a 72-hour window.
 - The deposits in that window summing to at least the full scenario
   threshold, even though none individually reaches it.
@@ -489,7 +489,7 @@ detector — no code in `pipelines/detectors/` implements it today.
 
 ## Description
 Depositing illicit proceeds in one location — often structured below
-reporting thresholds — and rapidly transferring or withdrawing them
+regulatory reporting limits — and rapidly transferring or withdrawing them
 elsewhere, obscuring the origin of funds and frustrating attempts to trace
 a cohesive trail. Criminals commonly deposit structured cash into an
 individual or business account in one region, then withdraw or transfer
@@ -539,7 +539,7 @@ controls.
   explanation.
 - Beneficiaries in countries with significant exchange rate volatility,
   facilitating arbitrage-based transactions.
-- Repeated structured cash deposits below reporting thresholds at
+- Repeated structured cash deposits below regulatory reporting limits at
   multiple branches or ATMs, followed by rapid outbound transfers to
   other regions.
 - Multiple unrelated funnel accounts feeding a single account used for
@@ -650,7 +650,7 @@ Data sources that would matter for detecting this in a real institution
   converge before transferring funds under the guise of business expenses
   or goods purchases, providing a façade of legitimate operations.
 - **Illicit Operator** — establishes or directs accounts across multiple
-  regions to deposit structured cash sums below reporting thresholds,
+  regions to deposit structured cash sums below regulatory reporting limits,
   rapidly transferring or withdrawing to obscure source and ownership.
 - **Money Mule** — deposits illicit cash under criminal instruction, often
   below threshold reporting limits, then transfers or withdraws in other
@@ -664,7 +664,7 @@ Data sources that would matter for detecting this in a real institution
 
 - **Instruments:** Bank Accounts (personal or business, receiving
   structured small deposits before rapid onward movement); Cash (physical
-  currency structured below reporting thresholds, hard to trace once
+  currency structured below regulatory reporting limits, hard to trace once
   deposited across locations).
 - **Services/products:** Electronic Funds Transfer (EFT), ATM Services,
   Peer-to-Peer Payment Systems, Payment Processing Services, Business Bank

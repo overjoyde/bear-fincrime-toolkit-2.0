@@ -13,7 +13,7 @@ any one of them suggests.
 ## Red flags / indicators
 - Multiple cash deposits to the same entity, each between 80% and 100% of
   an illustrative internal scenario threshold (10,000 SEK in this repo's
-  synthetic data — not a statutory reporting threshold).
+  synthetic data — not a statutory threshold for reporting).
 - At least 3 such deposits landing within a 72-hour window.
 - The deposits in that window summing to at least the full scenario
   threshold, even though none individually reaches it.

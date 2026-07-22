@@ -18,7 +18,7 @@ reference material, not as toolkit content.
 Separately, https://framework.amltrix.com/techniques/T0083-funnel-accounts
 (AMLTRIX, a MITRE-ATT&CK-style framework for money-laundering techniques)
 was read in full: technique T0083 "Funnel Accounts" - depositing structured
-cash below reporting thresholds in one location and rapidly moving it
+cash below regulatory reporting limits in one location and rapidly moving it
 elsewhere. It is not implemented by any current detector.
 
 Goal: create a `scenarios/` folder of structured typology write-ups - one
