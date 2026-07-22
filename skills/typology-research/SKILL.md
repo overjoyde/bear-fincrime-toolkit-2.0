@@ -46,6 +46,10 @@ unsourced summary presented as fact.
 
 ## How to research
 
+0. If the current repo has a `scenarios/` folder, write the brief there
+   using its template (`scenarios/README.md`) instead of an external
+   personal collection — steps 1-4 below describe ad hoc research with no
+   such folder to land in.
 1. Check `grounding/resources.md` first for a source that already covers
    this typology.
 2. If web research is available, prioritize FATF, Egmont Group, and national
